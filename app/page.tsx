@@ -203,7 +203,7 @@ export default function Home() {
     darkMode ? "bg-gray-800 text-white" : "bg-gray-400 text-black"
   }`}
   whileHover={{ scale: 1.05 }}
-  onClick={() => window.open("https://drive.google.com/file/d/1dRD6rTEFDn-cFRdlWePjsA-hH3BDnJrE/view?usp=sharing", "_blank")}
+  onClick={() => window.open("https://drive.google.com/file/d/135TYvacty8pNtKNZQ5zb5J2j6Qk5-lAs/view?usp=sharing", "_blank")}
 >
   View CV
 </motion.button>
