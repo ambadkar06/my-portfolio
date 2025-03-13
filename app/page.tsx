@@ -244,7 +244,7 @@ export default function Home() {
           value={formData.email} onChange={handleChange} 
           className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-800 focus:ring-2 focus:ring-blue-400"/>
         
-        <textarea name="message" placeholder="Your Message" required rows="4" 
+        <textarea name="message" placeholder="Your Message" required rows={4} 
           value={formData.message} onChange={handleChange} 
           className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-800 focus:ring-2 focus:ring-blue-400"/>
         
