@@ -198,12 +198,16 @@ export default function Home() {
         </a>
       </div>
       <div className="mt-6 space-x-4">
-  <motion.button 
-    className={`px-6 py-3 rounded-lg shadow-md transition ${darkMode ? "bg-gray-800 text-white" : "bg-gray-400 text-black"}`}
-    whileHover={{ scale: 1.05 }}
-  >
-    Download CV
-  </motion.button>
+<motion.button
+  className={`px-6 py-3 rounded-lg shadow-md transition ${
+    darkMode ? "bg-gray-800 text-white" : "bg-gray-400 text-black"
+  }`}
+  whileHover={{ scale: 1.05 }}
+  onClick={() => window.open("https://drive.google.com/file/d/1dRD6rTEFDn-cFRdlWePjsA-hH3BDnJrE/view?usp=sharing", "_blank")}
+>
+  View CV
+</motion.button>
+
 
   <motion.button 
     onClick={() => setShowContactForm(true)} 
