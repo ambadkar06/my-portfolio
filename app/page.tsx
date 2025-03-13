@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
   const [showNavigation, setShowNavigation] = useState(false);
-  const [animatedElements, setAnimatedElements] = useState([]);
+  const [animatedElements, setAnimatedElements] = useState<{ id: number; left: number; top: number; duration: number; delay: number }[]>([]);
   const [showContactForm, setShowContactForm] = useState(false);
   const navTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const router = useRouter();
