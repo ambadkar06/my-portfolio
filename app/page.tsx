@@ -14,6 +14,7 @@ export default function Home() {
   const [animatedElements, setAnimatedElements] = useState<{ id: number; left: number; top: number; duration: number; delay: number }[]>([]);
   const [showContactForm, setShowContactForm] = useState(false);
   const navTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const router = useRouter();
 
   useEffect(() => {
@@ -29,7 +30,9 @@ export default function Home() {
 
   // Function to show navigation menu
   const handleNavEnter = () => {
-    clearTimeout(navTimeoutRef.current);
+    if (navTimeoutRef.current) {
+      clearTimeout(navTimeoutRef.current);
+    }
     setShowNavigation(true);
   };
 
@@ -41,9 +44,10 @@ export default function Home() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
   
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  
   
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
