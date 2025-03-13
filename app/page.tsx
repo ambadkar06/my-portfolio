@@ -52,29 +52,29 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("Sending...");
-  
+
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
-  
-      const data = await res.json();
-      console.log("📩 API Response:", data);  
-  
-      if (data.success) {
-        setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" }); 
-      } else {
-        setStatus(" Failed to send message. Check logs.");
-      }
+        const res = await fetch("/.netlify/functions/contact", { 
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        const data = await res.json();
+        console.log("API Response:", data);  
+
+        if (data.success) {
+            setStatus("Message sent successfully!");
+            setFormData({ name: "", email: "", message: "" }); 
+        } else {
+            setStatus("Failed to send message. Check logs.");
+        }
     } catch (error) {
-      console.error("⚠️ Error sending message:", error);
-      setStatus(" Error sending message. Check console.");
+        console.error("Error sending message:", error);
+        setStatus("Error sending message. Check console.");
     }
-  };
-  
+};
+
   
   return (
     <div className={`${darkMode ? "bg-black text-white" : "bg-white text-black"} min-h-screen transition-all duration-500`}>
