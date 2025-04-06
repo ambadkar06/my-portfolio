@@ -76,6 +76,32 @@ export default function Projects() {
             </span>
           </div>
         </motion.div>
+        {/* AI Music Generator */}
+<motion.div 
+  className={`bg-[#112240] text-gray-200 p-6 rounded-lg shadow-lg 
+    ${darkMode ? "hover:shadow-[0_0_15px_rgba(255,255,255,0.6)]" : "hover:shadow-[0_0_15px_rgba(0,0,0,1)]"} 
+    transition-all duration-300`}
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+>
+  <Link href="https://ai-music-generator-roan.vercel.app/" target="_blank" rel="noopener noreferrer">
+    <h2 className="text-2xl font-semibold text-blue-400 hover:underline">
+      AI Music Generator ↗
+    </h2>
+  </Link>
+  <p className="mt-2">
+    A web app that generates music based on user prompts using Hugging Face’s MusicGen API. Includes dynamic waveform visualization with WaveSurfer.js, real-time background gradients, and mobile-responsive UI.
+  </p>
+  <div className="mt-2 flex flex-wrap gap-2">
+    <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>Next.js</span>
+    <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>Tailwind CSS</span>
+    <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>WaveSurfer.js</span>
+    <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>Web Audio API</span>
+    <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>MusicGen API</span>
+  </div>
+</motion.div>
+
         {/* Bank Loans Backend */}
         <motion.div 
           className={`bg-[#112240] text-gray-200 p-6 rounded-lg shadow-lg 
