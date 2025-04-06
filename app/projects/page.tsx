@@ -101,6 +101,32 @@ export default function Projects() {
     <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>MusicGen API</span>
   </div>
 </motion.div>
+{/* AI Interviewer */}
+<motion.div 
+          className={`bg-[#112240] text-gray-200 p-6 rounded-lg shadow-lg 
+            ${darkMode ? "hover:shadow-[0_0_15px_rgba(255,255,255,0.6)]" : "hover:shadow-[0_0_15px_rgba(0,0,0,1)]"} 
+            transition-all duration-300`}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Link href="https://ai-interviewer-tau.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <h2 className="text-2xl font-semibold text-blue-400 hover:underline">
+              AI Interviewer ↗
+            </h2>
+          </Link>
+          <p className="mt-2">
+            AI-powered platform to simulate interview questions based on user-uploaded resumes and job descriptions using FastAPI, GPT-3.5, and Next.js.
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>Next.js</span>
+            <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>FastAPI</span>
+            <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>OpenAI API</span>
+            <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>Render</span>
+            <span className="bg-gray-800 px-3 py-1 rounded text-sm" style={{ color: "lightgrey" }}>Vercel</span>
+          </div>
+        </motion.div>
+
 
         {/* Bank Loans Backend */}
         <motion.div 
